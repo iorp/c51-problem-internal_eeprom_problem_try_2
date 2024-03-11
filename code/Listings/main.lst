@@ -1,0 +1,116 @@
+C51 COMPILER V9.52.0.0   MAIN                                                              03/11/2024 03:11:50 PAGE 1   
+
+
+C51 COMPILER V9.52.0.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE main.c BROWSE INCDIR(C:\Keil\C51\H) DEBUG OBJECTEXTEND PRINT(.\Listings\mai
+                    -n.lst) TABS(2) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          #include "header/stc12.h"
+   2          #include <intrins.h>
+   3          #include "uart.h"
+   4           
+   5           
+   6           
+   7          // Define the EEPROM base address
+   8          #define EEPROM_BASE_ADDRESS 0x0000
+   9          
+  10          // Function to write a byte to EEPROM
+  11          void EEPROM_writeByte(unsigned int address, unsigned char byteToWrite) {
+  12   1          EA = 0; // Disable interrupts during write operation
+  13   1          IAP_CONTR = 0x82; // Enable IAP and set programming time
+  14   1      
+  15   1          IAP_DATA = byteToWrite; // Load data to be written
+  16   1          IAP_ADDRH = (address >> 8) & 0xFF; // Load high byte of address
+  17   1          IAP_ADDRL = address & 0xFF; // Load low byte of address
+  18   1      
+  19   1          IAP_CMD = 0x02; // Command to erase and write one byte
+  20   1          IAP_TRIG = 0x5A; // Trigger IAP
+  21   1         _nop_();// Wait for IAP to complete
+  22   1      
+  23   1          EA = 1; // Re-enable interrupts
+  24   1      }
+  25          
+  26          // Function to read a byte from EEPROM
+  27          unsigned char EEPROM_readByte(unsigned int address) {
+  28   1          unsigned char readData;
+  29   1      
+  30   1          EA = 0; // Disable interrupts during read operation
+  31   1          IAP_CONTR = 0x80; // Enable IAP
+  32   1      
+  33   1          IAP_ADDRH = (address >> 8) & 0xFF; // Load high byte of address
+  34   1          IAP_ADDRL = address & 0xFF; // Load low byte of address
+  35   1      
+  36   1          IAP_CMD = 0x01; // Command to read one byte
+  37   1          IAP_TRIG = 0x5A; // Trigger IAP
+  38   1      
+  39   1           
+  40   1              _nop_();// Wait for IAP to complete
+  41   1           
+  42   1      
+  43   1          readData = IAP_DATA; // Read the data from EEPROM
+  44   1      
+  45   1          EA = 1; // Re-enable interrupts
+  46   1      
+  47   1          return readData;
+  48   1      }
+  49          
+  50          
+  51          
+  52          
+  53           
+  54          
+C51 COMPILER V9.52.0.0   MAIN                                                              03/11/2024 03:11:50 PAGE 2   
+
+  55          void main() {
+  56   1         
+  57   1      
+  58   1          unsigned char byteToWrite = 0xAA;
+  59   1          
+  60   1          UART_init(9600);
+  61   1          
+  62   1          UART_printStr("Hello, this is working with one byte ... \r"); 
+  63   1          // Write a byte to EEPROM
+  64   1          EEPROM_writeByte(0, 0xAA); 
+  65   1          // Read the byte from EEPROM 
+  66   1          UART_printHex(EEPROM_readByte(0),1);// Print readed
+  67   1      
+  68   1       
+  69   1      
+  70   1      
+  71   1        
+  72   1            UART_printStr("\r... but not with 2 \r"); 
+  73   1          // Write a byte to EEPROM
+  74   1          EEPROM_writeByte(1, 0xBB); 
+  75   1          _nop_(); // no matter how long I wait here 
+  76   1          EEPROM_writeByte(2, 0xCC); 
+  77   1          // Read the byte from EEPROM 
+  78   1          UART_printHex(EEPROM_readByte(1),1);// Print readed
+  79   1          _nop_(); // no matter how long I wait here
+  80   1          UART_printHex(EEPROM_readByte(2),1);// Print readed
+  81   1        
+  82   1      
+  83   1          while(1) {
+  84   2              // Main loop, do nothing
+  85   2          }
+  86   1      }
+  87          
+  88          
+  89          
+  90           
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    154    ----
+   CONSTANT SIZE    =     65    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       1
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

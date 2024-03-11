@@ -1,0 +1,136 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+C:\Users\kot\Desktop\8051\snippets\eeprom\code\project.uvproj
+Project File Date:  03/09/2024
+
+<h2>Output:</h2>
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling main.c...
+C:\Keil\C51\H\stc12.h(15): error C231: 'ACC': redefinition
+C:\Keil\C51\H\stc12.h(16): error C231: 'B': redefinition
+C:\Keil\C51\H\stc12.h(17): error C231: 'PSW': redefinition
+C:\Keil\C51\H\stc12.h(19): error C231: 'CY': redefinition
+C:\Keil\C51\H\stc12.h(20): error C231: 'AC': redefinition
+C:\Keil\C51\H\stc12.h(21): error C231: 'F0': redefinition
+C:\Keil\C51\H\stc12.h(22): error C231: 'RS1': redefinition
+C:\Keil\C51\H\stc12.h(23): error C231: 'RS0': redefinition
+C:\Keil\C51\H\stc12.h(24): error C231: 'OV': redefinition
+C:\Keil\C51\H\stc12.h(25): error C231: 'P': redefinition
+C:\Keil\C51\H\stc12.h(27): error C231: 'SP': redefinition
+C:\Keil\C51\H\stc12.h(28): error C231: 'DPL': redefinition
+C:\Keil\C51\H\stc12.h(29): error C231: 'DPH': redefinition
+C:\Keil\C51\H\stc12.h(33): error C231: 'PCON': redefinition
+C:\Keil\C51\H\stc12.h(104): error C231: 'IE': redefinition
+C:\Keil\C51\H\stc12.h(106): error C231: 'EA': redefinition
+C:\Keil\C51\H\stc12.h(109): error C231: 'ES': redefinition
+C:\Keil\C51\H\stc12.h(110): error C231: 'ET1': redefinition
+C:\Keil\C51\H\stc12.h(111): error C231: 'EX1': redefinition
+C:\Keil\C51\H\stc12.h(112): error C231: 'ET0': redefinition
+C:\Keil\C51\H\stc12.h(113): error C231: 'EX0': redefinition
+C:\Keil\C51\H\stc12.h(118): error C231: 'IP': redefinition
+C:\Keil\C51\H\stc12.h(123): error C231: 'PS': redefinition
+C:\Keil\C51\H\stc12.h(124): error C231: 'PT1': redefinition
+C:\Keil\C51\H\stc12.h(125): error C231: 'PX1': redefinition
+C:\Keil\C51\H\stc12.h(126): error C231: 'PT0': redefinition
+C:\Keil\C51\H\stc12.h(127): error C231: 'PX0': redefinition
+C:\Keil\C51\H\stc12.h(136): error C231: 'P0': redefinition
+C:\Keil\C51\H\stc12.h(139): error C231: 'P1': redefinition
+C:\Keil\C51\H\stc12.h(143): error C231: 'P2': redefinition
+C:\Keil\C51\H\stc12.h(146): error C231: 'P3': redefinition
+C:\Keil\C51\H\stc12.h(161): error C231: 'TCON': redefinition
+C:\Keil\C51\H\stc12.h(163): error C231: 'TF1': redefinition
+C:\Keil\C51\H\stc12.h(164): error C231: 'TR1': redefinition
+C:\Keil\C51\H\stc12.h(165): error C231: 'TF0': redefinition
+C:\Keil\C51\H\stc12.h(166): error C231: 'TR0': redefinition
+C:\Keil\C51\H\stc12.h(167): error C231: 'IE1': redefinition
+C:\Keil\C51\H\stc12.h(168): error C231: 'IT1': redefinition
+C:\Keil\C51\H\stc12.h(169): error C231: 'IE0': redefinition
+C:\Keil\C51\H\stc12.h(170): error C231: 'IT0': redefinition
+C:\Keil\C51\H\stc12.h(172): error C231: 'TMOD': redefinition
+C:\Keil\C51\H\stc12.h(173): error C231: 'TL0': redefinition
+C:\Keil\C51\H\stc12.h(174): error C231: 'TH0': redefinition
+C:\Keil\C51\H\stc12.h(175): error C231: 'TL1': redefinition
+C:\Keil\C51\H\stc12.h(176): error C231: 'TH1': redefinition
+C:\Keil\C51\H\stc12.h(180): error C231: 'SCON': redefinition
+C:\Keil\C51\H\stc12.h(182): error C231: 'SM0': redefinition
+C:\Keil\C51\H\stc12.h(183): error C231: 'SM1': redefinition
+C:\Keil\C51\H\stc12.h(184): error C231: 'SM2': redefinition
+C:\Keil\C51\H\stc12.h(185): error C231: 'REN': redefinition
+C:\Keil\C51\H\stc12.h(186): error C231: 'TB8': redefinition
+C:\Keil\C51\H\stc12.h(187): error C231: 'RB8': redefinition
+C:\Keil\C51\H\stc12.h(188): error C231: 'TI': redefinition
+C:\Keil\C51\H\stc12.h(189): error C231: 'RI': redefinition
+C:\Keil\C51\H\stc12.h(191): error C231: 'SBUF': redefinition
+compiling uart.c...
+Target not created
+Build target 'Target 1'
+compiling main.c...
+main.c(13): error C202: 'IAP_CONTR': undefined identifier
+main.c(15): error C202: 'IAP_DATA': undefined identifier
+main.c(16): error C202: 'IAP_ADDRH': undefined identifier
+main.c(17): error C202: 'IAP_ADDRL': undefined identifier
+main.c(19): error C202: 'IAP_CMD': undefined identifier
+main.c(20): error C202: 'IAP_TRIG': undefined identifier
+main.c(31): error C202: 'IAP_CONTR': undefined identifier
+main.c(33): error C202: 'IAP_ADDRH': undefined identifier
+main.c(34): error C202: 'IAP_ADDRL': undefined identifier
+main.c(36): error C202: 'IAP_CMD': undefined identifier
+main.c(37): error C202: 'IAP_TRIG': undefined identifier
+main.c(43): error C202: 'IAP_DATA': undefined identifier
+compiling uart.c...
+Target not created
+Build target 'Target 1'
+compiling main.c...
+compiling uart.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_UART_PRINTF?UART
+Program Size: data=49.0 xdata=0 code=1268
+creating hex file from ".\Objects\project"...
+".\Objects\project" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_UART_PRINTF?UART
+Program Size: data=47.0 xdata=0 code=1337
+creating hex file from ".\Objects\project"...
+".\Objects\project" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_UART_PRINTF?UART
+Program Size: data=47.0 xdata=0 code=1340
+creating hex file from ".\Objects\project"...
+".\Objects\project" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_UART_PRINTF?UART
+Program Size: data=47.0 xdata=0 code=1340
+creating hex file from ".\Objects\project"...
+".\Objects\project" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_UART_PRINTF?UART
+Program Size: data=47.0 xdata=0 code=1340
+creating hex file from ".\Objects\project"...
+".\Objects\project" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+compiling uart.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?UART_LISTEN?UART
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_UART_PRINTF?UART
+Program Size: data=47.0 xdata=0 code=1273
+creating hex file from ".\Objects\project"...
+".\Objects\project" - 0 Error(s), 2 Warning(s).
